@@ -6,6 +6,28 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8F37821B2E7FF7E100B9B389 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8F37821A2E7FF7E100B9B389 /* Alamofire */; };
+		8F3782202E8007F200B9B389 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8F37821F2E8007F200B9B389 /* Kingfisher */; };
+		8F3782232E800E4B00B9B389 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8F3782222E800E4B00B9B389 /* RxSwift */; };
+		8F37822B2E80101600B9B389 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8F37822A2E80101600B9B389 /* RxCocoa */; };
+		8F37822E2E80105100B9B389 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8F37822D2E80105100B9B389 /* MBProgressHUD */; };
+		8F3782332E802E9300B9B389 /* CouchbaseLiteSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8F3782322E802E9300B9B389 /* CouchbaseLiteSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F3782362E80E77400B9B389 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8F3782082E7FEF2D00B9B389 /* Pokemon SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokemon SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +45,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F37822B2E80101600B9B389 /* RxCocoa in Frameworks */,
+				8F3782232E800E4B00B9B389 /* RxSwift in Frameworks */,
+				8F3782202E8007F200B9B389 /* Kingfisher in Frameworks */,
+				8F3782332E802E9300B9B389 /* CouchbaseLiteSwift in Frameworks */,
+				8F37822E2E80105100B9B389 /* MBProgressHUD in Frameworks */,
+				8F37821B2E7FF7E100B9B389 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				8F37820A2E7FEF2D00B9B389 /* Pokemon SwiftUI */,
+				8F3782292E80101600B9B389 /* Frameworks */,
 				8F3782092E7FEF2D00B9B389 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +74,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8F3782292E80101600B9B389 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -55,6 +91,7 @@
 				8F3782042E7FEF2D00B9B389 /* Sources */,
 				8F3782052E7FEF2D00B9B389 /* Frameworks */,
 				8F3782062E7FEF2D00B9B389 /* Resources */,
+				8F3782362E80E77400B9B389 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -65,6 +102,12 @@
 			);
 			name = "Pokemon SwiftUI";
 			packageProductDependencies = (
+				8F37821A2E7FF7E100B9B389 /* Alamofire */,
+				8F37821F2E8007F200B9B389 /* Kingfisher */,
+				8F3782222E800E4B00B9B389 /* RxSwift */,
+				8F37822A2E80101600B9B389 /* RxCocoa */,
+				8F37822D2E80105100B9B389 /* MBProgressHUD */,
+				8F3782322E802E9300B9B389 /* CouchbaseLiteSwift */,
 			);
 			productName = "Pokemon SwiftUI";
 			productReference = 8F3782082E7FEF2D00B9B389 /* Pokemon SwiftUI.app */;
@@ -94,6 +137,13 @@
 			);
 			mainGroup = 8F3781FF2E7FEF2D00B9B389;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8F3782192E7FF7E100B9B389 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8F37821E2E8007F100B9B389 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8F3782212E800E4B00B9B389 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				8F37822C2E80105100B9B389 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+				8F3782312E802E9300B9B389 /* XCRemoteSwiftPackageReference "couchbase-lite-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F3782092E7FEF2D00B9B389 /* Products */;
 			projectDirPath = "";
@@ -251,10 +301,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Pokemon SwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = VL4T2DFCRG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pokemon-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,10 +331,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Pokemon SwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = VL4T2DFCRG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pokemon-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +376,82 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F3782192E7FF7E100B9B389 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		8F37821E2E8007F100B9B389 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
+		8F3782212E800E4B00B9B389 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+		8F37822C2E80105100B9B389 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		8F3782312E802E9300B9B389 /* XCRemoteSwiftPackageReference "couchbase-lite-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/couchbase/couchbase-lite-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F37821A2E7FF7E100B9B389 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F3782192E7FF7E100B9B389 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8F37821F2E8007F200B9B389 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F37821E2E8007F100B9B389 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		8F3782222E800E4B00B9B389 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F3782212E800E4B00B9B389 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		8F37822A2E80101600B9B389 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F3782212E800E4B00B9B389 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8F37822D2E80105100B9B389 /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F37822C2E80105100B9B389 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+		8F3782322E802E9300B9B389 /* CouchbaseLiteSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F3782312E802E9300B9B389 /* XCRemoteSwiftPackageReference "couchbase-lite-ios" */;
+			productName = CouchbaseLiteSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F3782002E7FEF2D00B9B389 /* Project object */;
 }
