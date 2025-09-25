@@ -76,13 +76,10 @@ struct ProfileView: View {
                         }
                         .padding(.horizontal, 20)
 
-                        Spacer(minLength: 50)
-
-                        PokemonButton(title: "Sign Out", style: .secondary) {
+                        PokemonButton(title: "Sign Out", style: .tertiary) {
                             databaseManager.logout()
                         }
                         .padding(.horizontal, 20)
-                        .padding(.bottom, 40)
                     } else {
                         VStack(spacing: 20) {
                             Image(systemName: "person.crop.circle.badge.exclamationmark")
@@ -105,8 +102,6 @@ struct ProfileView: View {
                 )
                 .ignoresSafeArea()
             )
-            .navigationTitle("Profile")
-            .navigationBarTitleDisplayMode(.large)
         }
     }
 }

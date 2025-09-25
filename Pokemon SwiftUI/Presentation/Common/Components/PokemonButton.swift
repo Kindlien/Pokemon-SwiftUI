@@ -14,12 +14,13 @@ struct PokemonButton: View {
     let style: ButtonStyle
 
     enum ButtonStyle {
-        case primary, secondary
+        case primary, secondary, tertiary
 
         var backgroundColor: Color {
             switch self {
             case .primary: return PokemonTheme.primaryBlue
             case .secondary: return PokemonTheme.cardBackground
+            case .tertiary: return PokemonTheme.purple
             }
         }
 
@@ -27,6 +28,7 @@ struct PokemonButton: View {
             switch self {
             case .primary: return .white
             case .secondary: return PokemonTheme.textPrimary
+            case .tertiary: return .white
             }
         }
     }

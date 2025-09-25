@@ -1,5 +1,5 @@
 {
-  "originHash" : "555e82ad98fbdc70c4fd69a1b1e432fea8bac4c6e2103709559917f133f852dd",
+  "originHash" : "d44d01a87d61df8f2a8719f3b7d2bf6aa6d910368dadce559db25f3ae458f40f",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "4a466d2513922dd6c8a0da723f2a7d92ac0dcafc",
         "version" : "3.2.4"
+      }
+    },
+    {
+      "identity" : "fxpagecontrol",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nicklockwood/FXPageControl.git",
+      "state" : {
+        "revision" : "a94633402ba98c52f86c2a70e61ff086dec9de78",
+        "version" : "1.6.0"
       }
     },
     {
@@ -44,6 +53,15 @@
       "state" : {
         "revision" : "5dd1907d64f0d36f158f61a466bab75067224893",
         "version" : "6.9.0"
+      }
+    },
+    {
+      "identity" : "xlpagertabstrip",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xmartlabs/XLPagerTabStrip.git",
+      "state" : {
+        "revision" : "211ed62aa376722cf93c429802a8b6ff66a8bd52",
+        "version" : "9.1.0"
       }
     }
   ],

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F1229152E84580E00EFCE15 /* XLPagerTabStrip in Frameworks */ = {isa = PBXBuildFile; productRef = 8F1229142E84580E00EFCE15 /* XLPagerTabStrip */; };
 		8F37821B2E7FF7E100B9B389 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8F37821A2E7FF7E100B9B389 /* Alamofire */; };
 		8F3782202E8007F200B9B389 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8F37821F2E8007F200B9B389 /* Kingfisher */; };
 		8F3782232E800E4B00B9B389 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8F3782222E800E4B00B9B389 /* RxSwift */; };
@@ -47,6 +48,7 @@
 			files = (
 				8F37822B2E80101600B9B389 /* RxCocoa in Frameworks */,
 				8F3782232E800E4B00B9B389 /* RxSwift in Frameworks */,
+				8F1229152E84580E00EFCE15 /* XLPagerTabStrip in Frameworks */,
 				8F3782202E8007F200B9B389 /* Kingfisher in Frameworks */,
 				8F3782332E802E9300B9B389 /* CouchbaseLiteSwift in Frameworks */,
 				8F37822E2E80105100B9B389 /* MBProgressHUD in Frameworks */,
@@ -108,6 +110,7 @@
 				8F37822A2E80101600B9B389 /* RxCocoa */,
 				8F37822D2E80105100B9B389 /* MBProgressHUD */,
 				8F3782322E802E9300B9B389 /* CouchbaseLiteSwift */,
+				8F1229142E84580E00EFCE15 /* XLPagerTabStrip */,
 			);
 			productName = "Pokemon SwiftUI";
 			productReference = 8F3782082E7FEF2D00B9B389 /* Pokemon SwiftUI.app */;
@@ -143,6 +146,7 @@
 				8F3782212E800E4B00B9B389 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				8F37822C2E80105100B9B389 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
 				8F3782312E802E9300B9B389 /* XCRemoteSwiftPackageReference "couchbase-lite-ios" */,
+				8F1229132E84580E00EFCE15 /* XCRemoteSwiftPackageReference "XLPagerTabStrip" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F3782092E7FEF2D00B9B389 /* Products */;
@@ -378,6 +382,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8F1229132E84580E00EFCE15 /* XCRemoteSwiftPackageReference "XLPagerTabStrip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xmartlabs/XLPagerTabStrip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
 		8F3782192E7FF7E100B9B389 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -421,6 +433,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8F1229142E84580E00EFCE15 /* XLPagerTabStrip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F1229132E84580E00EFCE15 /* XCRemoteSwiftPackageReference "XLPagerTabStrip" */;
+			productName = XLPagerTabStrip;
+		};
 		8F37821A2E7FF7E100B9B389 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8F3782192E7FF7E100B9B389 /* XCRemoteSwiftPackageReference "Alamofire" */;

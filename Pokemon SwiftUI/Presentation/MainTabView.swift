@@ -6,37 +6,13 @@
 //
 
 import SwiftUI
+import XLPagerTabStrip
 
 struct MainTabView: View {
     @ObservedObject var databaseManager: CouchbaseManager
 
     var body: some View {
-        TabView {
-            HomeView(databaseManager: databaseManager)
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-
-            ProfileView(databaseManager: databaseManager)
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
-        }
-        .accentColor(PokemonTheme.primaryBlue)
-        .onAppear {
-            setupTabBarAppearance()
-        }
-    }
-
-    private func setupTabBarAppearance() {
-        let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor.white
-        appearance.shadowColor = UIColor.lightGray
-
-        UITabBar.appearance().standardAppearance = appearance
-        UITabBar.appearance().scrollEdgeAppearance = appearance
+        PagerTabStripView(databaseManager: databaseManager)
+            .edgesIgnoringSafeArea(.bottom)
     }
 }

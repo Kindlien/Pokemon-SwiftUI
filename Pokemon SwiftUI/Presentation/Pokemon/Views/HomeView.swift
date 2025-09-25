@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var viewModel: PokemonViewModel
+    @FocusState private var isSearchFieldFocused: Bool
 
     init(databaseManager: CouchbaseManager) {
         self._viewModel = StateObject(wrappedValue: PokemonViewModel(databaseManager: databaseManager))
@@ -34,6 +35,7 @@ struct HomeView: View {
                                 .textFieldStyle(PlainTextFieldStyle())
                                 .font(.body)
                                 .submitLabel(.search)
+                                .focused($isSearchFieldFocused)
                                 .onSubmit {
                                     if !viewModel.searchText.isEmpty {
                                         viewModel.performSearch(viewModel.searchText)
@@ -45,12 +47,13 @@ struct HomeView: View {
                         .cornerRadius(12)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
-                                .stroke(viewModel.isSearching ? PokemonTheme.primaryBlue : PokemonTheme.lightBlue, lineWidth: viewModel.isSearching ? 2 : 1)
+                                .stroke(isSearchFieldFocused ? PokemonTheme.primaryBlue : PokemonTheme.lightBlue, lineWidth: isSearchFieldFocused ? 2 : 1)
                         )
 
                         if !viewModel.searchText.isEmpty {
                             Button("Clear") {
                                 viewModel.clearSearch()
+                                isSearchFieldFocused = false
                             }
                             .foregroundColor(PokemonTheme.primaryBlue)
                             .fontWeight(.medium)
@@ -117,9 +120,10 @@ struct HomeView: View {
                     .padding(.horizontal)
                 }
                 .background(Color(UIColor.systemGroupedBackground))
+                .onTapGesture {
+                    isSearchFieldFocused = false
+                }
             }
-            .navigationTitle("Pokemon")
-            .navigationBarTitleDisplayMode(.large)
         }
         .onAppear {
             if !viewModel.hasInitiallyLoaded {
@@ -131,6 +135,13 @@ struct HomeView: View {
                 PokemonDetailBottomSheet(pokemon: pokemon, databaseManager: viewModel.databaseManager)
             }
         }
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done") {
+                    isSearchFieldFocused = false
+                }
+            }
+        }
     }
 }
-
